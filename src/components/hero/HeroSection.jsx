@@ -16,11 +16,30 @@ const Hero = styled.section`
     padding-top: 15vh;
 `
 
+const BottomFade = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 280px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    #0D0D0D
+  );
+
+  pointer-events: none;
+  z-index: 2;
+`;
+
 const HeroSection = () => {
     return (
         <Hero>
             <HeroBackground />
             <HeroOverlay />
+            <BottomFade />
             <HeroContent />
         </Hero>
     )
